@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+
+    <com.example.fnspl.retail_app.Actvities.widget.SquareImageLayout
+        android:id="@+id/iv_product"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@drawable/avocado"
+        android:layout_centerVertical="true"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/iv_product"
+        android:layout_toLeftOf="@+id/ll_info"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/m5">
+
+        <TextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avocade"
+            android:textSize="@dimen/_15ssp"
+            android:textColor="@color/colorGreydeep"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tv_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="each"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/colorGreymid"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="196 Rs/-"
+            android:textSize="@dimen/_15ssp"
+            android:textColor="@color/colorGreendeep"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_info"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/m5"
+        android:layout_marginRight="@dimen/m5"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:src="@drawable/minus_icn"
+            android:layout_weight="1"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/colorGreydeep"
+            android:layout_marginLeft="@dimen/m5"
+            android:layout_marginRight="@dimen/m5"
+            android:textSize="@dimen/_15ssp"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
+            android:src="@drawable/plus_icn"
+            android:layout_weight="1"
+            android:scaleType="fitXY"/>
+    </LinearLayout>
+
+</RelativeLayout>

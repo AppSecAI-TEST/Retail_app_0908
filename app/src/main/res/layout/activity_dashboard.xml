@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.example.fnspl.retail_app.Actvities.models.Login_model" />
+
+        <variable
+            name="activity"
+            type="com.example.fnspl.retail_app.Actvities.activity.DashboardActivity" />
+    </data>
+
+    <android.support.v4.widget.DrawerLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:fitsSystemWindows="false"
+        tools:openDrawer="start">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_height"
+                android:background="@color/colorWhite">
+
+                <ImageView
+                    android:id="@+id/img_drawerToggel"
+                    android:layout_width="@dimen/icon_toolbar"
+                    android:layout_height="@dimen/icon_toolbar"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:onClick="@{()->activity.openDrawerOnClick()}"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_drawer_menu" />
+
+                <RelativeLayout
+                    android:layout_width="@dimen/cart_imageHeight"
+                    android:layout_height="@dimen/cart_imageHeight"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:onClick="@{()->activity.showCart()}">
+
+                    <ImageView
+                        android:id="@+id/img_cart"
+                        android:layout_width="@dimen/icon_toolbar"
+                        android:layout_height="@dimen/icon_toolbar"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_cart" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/circle_green"
+                        android:padding="@dimen/_5sdp"
+                        android:text="1"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_9ssp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="@dimen/logo_normal"
+                android:layout_height="@dimen/logo_normal"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/login_logo" />
+
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/img_logo"
+                android:background="@color/colorGrey" />
+        </RelativeLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="@dimen/_195sdp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="#5FAF50">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/m20"
+                    android:layout_marginTop="@dimen/m20">
+
+                    <ImageView
+                        android:id="@+id/iv_image"
+                        android:layout_width="@dimen/_36sdp"
+                        android:layout_height="@dimen/_36sdp"
+                        android:background="@drawable/circle_white"
+                        android:scaleType="fitXY"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/m10"
+                        android:text="ADHRIAN P"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_15ssp" />
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/m10"
+                            android:background="#56A049"
+                            android:paddingBottom="@dimen/m5"
+                            android:paddingLeft="@dimen/m20"
+                            android:paddingTop="@dimen/m5"
+                            android:text="@string/for_you"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <com.example.fnspl.retail_app.Actvities.widget.AdapterLinearLayout
+                            android:id="@+id/rv_for_you"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/m20"
+                            android:background="#56A049"
+                            android:paddingBottom="@dimen/m5"
+                            android:paddingLeft="@dimen/m20"
+                            android:paddingTop="@dimen/m5"
+                            android:text="@string/browse"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <com.example.fnspl.retail_app.Actvities.widget.AdapterLinearLayout
+                            android:id="@+id/rv_browse"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="#56A049"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="@dimen/m20"
+                            android:onClick="@{()->activity.logout()}">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/m20"
+                                android:text="@string/logout"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_13ssp" />
+                            <ImageView
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:src="@drawable/ic_logout"
+                                android:scaleType="fitXY"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/m5"
+                                android:layout_marginTop="@dimen/m5"
+                                android:layout_marginBottom="@dimen/m5"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</layout>

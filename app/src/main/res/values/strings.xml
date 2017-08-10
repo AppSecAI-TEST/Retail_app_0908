@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Retail_app</string>
+    <string name="enteryourusername">Enter your username</string>
+    <string name="enteryourpassword">Enter your password</string>
+    <string name="enteryouremail">Enter your Email</string>
+    <string name="enteryourphonenumber">Enter your Phone Number</string>
+    <string name="enteryourlocation">Enter your Location</string>
+    <string name="forgetpassword">forget password?</string>
+    <string name="LOGIN">LOGIN</string>
+    <string name="SIGNUP">SIGN UP</string>
+    <string name="SUBMIT">SUBMIT</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_product_hint"><![CDATA[Search your product & get direction]]></string>
+    <string name="offer_promotion"><![CDATA[Offer & Promotion]]></string>
+    <string name="quick_checkout">Quick Checkout?</string>
+    <string name="shop_by_category">Sort By Category</string>
+    <string name="checkout_now">Checkout Now</string>
+    <string name="continue_shoping">Continue Shopping</string>
+    <string name="your_cart">Your Cart</string>
+    <string name="for_you">For You</string>
+    <string name="browse">Browse</string>
+    <string name="logout">Logout</string>
+</resources>

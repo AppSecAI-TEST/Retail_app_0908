@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <com.example.fnspl.retail_app.Actvities.widget.SquareImageLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/avocado" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m5"
+            android:text="1.22 Rs/-"
+            android:textColor="@color/colorGreendeep"
+            android:textSize="@dimen/_13ssp" />
+
+        <TextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:text="Spinach"
+            android:textColor="@color/colorGreydeep"
+            android:textSize="@dimen/_15ssp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:text="Each"
+            android:textColor="@color/colorGreymid"
+            android:textSize="@dimen/_13ssp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1ssp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@color/colorGreymid" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m5"
+        android:text="Not Available"
+        android:textColor="@color/colorRed"
+        android:textSize="@dimen/_17ssp"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/m5"
+        android:drawableLeft="@drawable/draxable_left"
+        android:drawablePadding="@dimen/m5"
+        android:gravity="center"
+        android:text="Navigate"
+        android:textColor="@color/colorGreendeep"
+        android:textSize="@dimen/_15ssp" />
+
+
+</LinearLayout>

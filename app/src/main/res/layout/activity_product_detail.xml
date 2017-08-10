@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!--<variable name="user" type="com.example.fnspl.retail_app.Actvities.models.Login_model"/>-->
+        <variable
+            name="activity"
+            type="com.example.fnspl.retail_app.Actvities.activity.ProductDetailActivity" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/icon_toolbar"
+                android:layout_height="@dimen/icon_toolbar"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/m10"
+                android:onClick="@{()-> activity.onBack()}"
+                android:scaleType="fitXY"
+                android:src="@drawable/back" />
+
+            <ImageView
+                android:id="@+id/iv_like"
+                android:layout_width="@dimen/icon_toolbar"
+                android:layout_height="@dimen/icon_toolbar"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/m10"
+                android:onClick="@{()->activity.onItemLike()}"
+                android:scaleType="fitXY"
+                android:src="@drawable/like" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_bottom"
+            android:layout_below="@+id/rl_toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_230sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/m20"
+                    android:layout_marginRight="@dimen/m20"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/avocado" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/m20"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="196"
+                        android:textColor="@color/colorGreenlite"
+                        android:textSize="@dimen/_19ssp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/m10"
+                        android:text=" Rs/- each"
+                        android:textColor="@color/colorGreenlite"
+                        android:textSize="@dimen/_16ssp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="Avocado"
+                    android:textColor="@color/colorGreydeep"
+                    android:textSize="@dimen/_19ssp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/m20"
+                    android:text="Loved for their creamy texture and heart healthy unsaturated fat , versatile avocado can be added to everything from salad to smoothees and Dessert recipes."
+                    android:textColor="@color/colorGreydeep"
+                    android:textSize="@dimen/_15ssp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorGrey"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/btn_height_large"
+                android:background="@drawable/btn_green">
+                <ImageView
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/location_icn"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/m20"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Navigate"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_19ssp"
+                    android:layout_marginRight="@dimen/m20"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

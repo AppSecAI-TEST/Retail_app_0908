@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="home"
+            type="com.example.fnspl.retail_app.Actvities.fragment.HomeFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGrey"
+        android:paddingLeft="@dimen/m20"
+        android:paddingRight="@dimen/m20"
+        tools:context="com.example.fnspl.retail_app.Actvities.fragment.HomeFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_text_height"
+                    android:layout_marginTop="@dimen/m20"
+                    android:background="@drawable/edit_background_white"
+                    android:drawableRight="@drawable/ic_search_gray"
+                    android:hint="@string/search_product_hint"
+                    android:paddingLeft="@dimen/m10"
+                    android:paddingRight="@dimen/m10"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="@dimen/_13ssp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_180sdp"
+                    android:layout_marginTop="@dimen/m20"
+                    android:background="@drawable/map">
+
+                    <ImageView
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_alignParentRight="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/zoomin" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/m20"
+                    android:text="@string/offer_promotion"
+                    android:textColor="@color/colorGreydeep"
+                    android:textSize="@dimen/_21ssp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m20">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/vp_specialOffer"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_120sdp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_height"
+                    android:layout_marginTop="@dimen/m20"
+                    android:background="@drawable/btn_green">
+
+                    <ImageView
+                        android:layout_width="@dimen/_28sdp"
+                        android:layout_height="@dimen/_26sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/m20"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/barcode" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/m20"
+                        android:text="@string/quick_checkout"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/_17ssp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/m20"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btn_height"
+                        android:background="@color/colorGreendeep"
+                        android:gravity="center"
+                        android:text="@string/shop_by_category"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_17ssp" />
+
+                    <com.example.fnspl.retail_app.Actvities.widget.ExpendableGridView
+                        android:id="@+id/grid_profession"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/m10"
+                        android:gravity="center"
+                        android:horizontalSpacing="@dimen/m5"
+                        android:numColumns="3"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="@dimen/m5" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>

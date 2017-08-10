@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="mycart"
+            type="com.example.fnspl.retail_app.Actvities.fragment.Mycart" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="@dimen/icon_toolbar"
+                android:layout_height="@dimen/icon_toolbar"
+                android:layout_margin="@dimen/m10"
+                android:padding="@dimen/m5"
+                android:scaleType="fitXY"
+                android:src="@drawable/btn_cross"
+                android:onClick="@{()->mycart.closeDialog()}"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/your_cart"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_19ssp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/m20"
+            android:layout_below="@+id/rl_toolbar"
+            android:background="@color/colorGreendeep" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_grocery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_continue_shopping"
+            android:layout_below="@+id/tv"
+            android:scrollbars="vertical" />
+
+        <Button
+            android:id="@+id/btn_continue_shopping"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height_small"
+            android:layout_above="@+id/rl_bottom"
+            android:layout_marginBottom="@dimen/m10"
+            android:layout_marginLeft="@dimen/m40"
+            android:layout_marginRight="@dimen/m40"
+            android:layout_marginTop="@dimen/m10"
+            android:background="@drawable/btn_green"
+            android:text="@string/continue_shoping"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_15ssp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1ssp"
+                android:background="@color/colorGreymid" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:layout_marginLeft="@dimen/m20"
+                android:layout_marginTop="@dimen/m10"
+                android:text="Subtotal : 318 Rs/-"
+                android:textColor="@color/colorGreydeep"
+                android:textSize="@dimen/_15ssp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/view"
+                android:layout_marginRight="@dimen/m20"
+                android:layout_marginTop="@dimen/m10"
+                android:text="Items : 4"
+                android:textColor="@color/colorGreydeep"
+                android:textSize="@dimen/_15ssp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height_small"
+                android:layout_below="@+id/price"
+                android:layout_marginBottom="@dimen/m10"
+                android:layout_marginLeft="@dimen/m40"
+                android:layout_marginRight="@dimen/m40"
+                android:layout_marginTop="@dimen/m10"
+                android:background="@drawable/btn_green"
+                android:text="@string/checkout_now"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_15ssp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>
