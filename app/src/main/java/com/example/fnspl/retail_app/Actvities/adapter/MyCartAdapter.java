@@ -19,8 +19,11 @@ import java.util.List;
 
 
 public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.ViewHolder> {
+    private  ImageView iv_min_cart , iv_add_cart;
+    private  TextView tv_quantity_cart;
     private List<String> values;
     private Context context ;
+    private int count = 0;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -37,6 +40,9 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.ViewHolder
             super(v);
             layout = v;
             tv_name_itemGrocery = (TextView) v.findViewById(R.id.tv_product_name);
+            tv_quantity_cart = (TextView) v.findViewById(R.id.tv_quantity_cart);
+            iv_add_cart = (ImageView) v.findViewById(R.id.iv_add_cart);
+            iv_min_cart = (ImageView) v.findViewById(R.id.iv_min_cart);
 
         }
     }
@@ -59,10 +65,26 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.ViewHolder
         // create a new view
         LayoutInflater inflater = LayoutInflater.from(
                 parent.getContext());
-        View v =
-                inflater.inflate(R.layout.item_mycart, parent, false);
+        View v = inflater.inflate(R.layout.item_mycart, parent, false);
         // set the view's size, margins, paddings and layout parameters
         ViewHolder vh = new ViewHolder(v);
+
+        iv_add_cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                count++ ;
+                tv_quantity_cart.setText(""+count);
+            }
+        });
+
+        iv_min_cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                count-- ;
+                tv_quantity_cart.setText(""+count);
+            }
+        });
+
         return vh;
     }
 
