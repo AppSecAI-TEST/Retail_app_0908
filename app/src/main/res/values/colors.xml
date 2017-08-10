@@ -13,4 +13,6 @@
     <color name="colorGreendeep">#5fb050</color>   <!--508500-->
     <color name="colorGreenlite">#5fd050</color> <!--5EB050-->
     <color name="colorGreenlink">#508500</color>   <!--508500-->
+    <color name="colorBlackLight">#4A4A4A</color>   <!--508500-->
+    <color name="colorBlackLightHeader">#606060</color>   <!--508500-->
 </resources>

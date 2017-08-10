@@ -24,10 +24,10 @@
                 android:layout_width="@dimen/icon_toolbar"
                 android:layout_height="@dimen/icon_toolbar"
                 android:layout_margin="@dimen/m10"
+                android:onClick="@{()->mycart.closeDialog()}"
                 android:padding="@dimen/m5"
                 android:scaleType="fitXY"
-                android:src="@drawable/btn_cross"
-                android:onClick="@{()->mycart.closeDialog()}"/>
+                android:src="@drawable/btn_cross" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -48,24 +48,38 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_grocery"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/btn_continue_shopping"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/view1"
             android:layout_below="@+id/tv"
             android:scrollbars="vertical" />
 
-        <Button
-            android:id="@+id/btn_continue_shopping"
+        <View
+            android:id="@+id/view1"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/btn_height_small"
+            android:layout_height="1px"
+            android:background="@color/colorGreymid"
+            android:layout_above="@+id/rl_continue_shoping"/>
+        <RelativeLayout
+            android:id="@+id/rl_continue_shoping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_above="@+id/rl_bottom"
-            android:layout_marginBottom="@dimen/m10"
-            android:layout_marginLeft="@dimen/m40"
-            android:layout_marginRight="@dimen/m40"
-            android:layout_marginTop="@dimen/m10"
-            android:background="@drawable/btn_green"
-            android:text="@string/continue_shoping"
-            android:textAllCaps="false"
-            android:textSize="@dimen/_15ssp" />
+            android:background="@color/colorGrey">
+
+            <Button
+                android:id="@+id/btn_continue_shopping"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height_small"
+                android:layout_marginBottom="@dimen/m10"
+                android:layout_marginLeft="@dimen/m40"
+                android:layout_marginRight="@dimen/m40"
+                android:layout_marginTop="@dimen/m10"
+                android:background="@drawable/btn_green"
+                android:text="@string/continue_shoping"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_15ssp"
+                android:onClick="@{()->mycart.closeDialog()}"/>
+        </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rl_bottom"
@@ -77,7 +91,7 @@
             <View
                 android:id="@+id/view"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_1ssp"
+                android:layout_height="1px"
                 android:background="@color/colorGreymid" />
 
             <TextView

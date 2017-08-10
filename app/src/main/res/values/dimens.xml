@@ -6,7 +6,7 @@
     <dimen name="logo_normal">@dimen/_70sdp</dimen>
     <dimen name="m20">@dimen/_18sdp</dimen>
     <dimen name="m10">@dimen/_9sdp</dimen>
-    <dimen name="edit_text_height">@dimen/_40sdp</dimen>
+    <dimen name="edit_text_height">@dimen/_32sdp</dimen>
     <dimen name="btn_height_small">@dimen/_35sdp</dimen>
     <dimen name="btn_height">@dimen/_40sdp</dimen>
     <dimen name="btn_width">@dimen/_100sdp</dimen>
