@@ -39,9 +39,6 @@ public class SignupActivity extends AppCompatActivity{
         binding_signup.setUser(login_model);
         binding_signup.setActivity(SignupActivity.this);
 
-
-
-
     }
 
 
@@ -49,8 +46,8 @@ public class SignupActivity extends AppCompatActivity{
 
         Log.d(TAG, "login"+ login_model.getUsername());
         login_model.getUsername();
-        startActivity(new Intent(SignupActivity.this,LoginActivity.class));
-        finish();
+        supportFinishAfterTransition();
+        overridePendingTransition(R.anim.slideinfromleft, R.anim.slideouttoright);
     }
 
     public void signup(){
@@ -62,6 +59,9 @@ public class SignupActivity extends AppCompatActivity{
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+
+        supportFinishAfterTransition();
+        overridePendingTransition(R.anim.slideinfromleft, R.anim.slideouttoright);
     }
 
 

@@ -36,26 +36,27 @@ public class LoginActivity extends AppCompatActivity {
         Typeface fonthin = Typeface.createFromAsset(getAssets(), "fonts/helviticaneuthin.ttf");
 
 
-
     }
 
 
     public void login(){
-
         Log.d(TAG, "login"+ login_model.getUsername());
         login_model.getUsername();
         startActivity(new Intent(LoginActivity.this,DashboardActivity.class));
-        finish();
+        overridePendingTransition(R.anim.slideinfromright, R.anim.slideouttoleft);
+        supportFinishAfterTransition();
     }
 
     public void signup(){
 
         Log.d(TAG, "signup");
         startActivity(new Intent(LoginActivity.this,SignupActivity.class));
+        overridePendingTransition(R.anim.slideinfromright, R.anim.slideouttoleft);
     }
 
     public void forgetpassoword(){
         startActivity(new Intent(LoginActivity.this,ForgetpasswordActivity.class));
+        overridePendingTransition(R.anim.slideinfromright, R.anim.slideouttoleft);
     }
 
 

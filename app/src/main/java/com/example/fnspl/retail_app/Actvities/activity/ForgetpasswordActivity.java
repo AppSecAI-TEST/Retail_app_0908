@@ -23,5 +23,8 @@ public class ForgetpasswordActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+
+        supportFinishAfterTransition();
+        overridePendingTransition(R.anim.slideinfromleft, R.anim.slideouttoright);
     }
 }
